@@ -128,7 +128,7 @@ if(isset($_POST["edit_no"]) && isset($_POST["password"]) && isset($_POST["check"
    $edi_comment = $_POST["comment"];
    $edi_password = $_POST["password"];
 
-	 $edi_sql = 'update tb_mission_52 set name=:name,comment=:comment where id=:id and post_date=:ede_pass';
+	 $edi_sql = 'update tb_mission_52 set name=:name,comment=:comment where id=:id and post_date=:edi_pass';
 	 $stmt = $pdo->prepare($edi_sql); // 入力を受ける準備。SQLにユーザーの入力を含む場合はprepareを使用する //
 	 $stmt->bindParam(':name', $edi_name, PDO::PARAM_STR);
 	 $stmt->bindParam(':comment', $edi_comment, PDO::PARAM_STR);
